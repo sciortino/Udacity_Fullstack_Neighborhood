@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Simple Map</title>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  </head>
+  <body>
+
+    <div class="Grid">
+      <div class="Grid-cell-small">
+        <input class="fullWidth" data-bind="textInput: inputStr" />
+
+        <div data-bind="foreach: locList">
+
+            <div class="listItem" data-bind="text: locName, click: $parent.locClick"></div><br>
+
+        </div>
+      </div>
+
+      <div class="Grid-cell">
+        <div id="map"></div>
+      </div>
+
+    </div>
+    <script type='text/javascript' src='knockout-3.4.2.js'></script>
+    <script type='text/javascript' src='viewmodel.js'></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCe_C5RIwwl0IVSQrEcJvHXqljBoYZ1BhU&callback=initMap"
+      async defer></script>
+
+  </body>
+</html>
