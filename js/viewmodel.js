@@ -122,11 +122,13 @@ function LocationsModel() {
                         info: info
                     });
                 }
-            })
+            });
 
             for (var i in locListInit) {
-                self.locList.push(locListInit[i]);
-            };
+                if ( locListInit[i] ) {
+                    self.locList.push(locListInit[i]);
+                }
+            }
             showMarkers();
         },
         error: function ( result ) {
@@ -164,7 +166,6 @@ function LocationsModel() {
                     var latLng = {lat: locListInit[i].lat, lng: locListInit[i].lng};
                     // Create the new map marker
                     var markerId = addMarker(latLng, locListInit[i].locName, locListInit[i].info);
-                    console.log(locListInit[i] + markerId)
                     // Add item to viewmodel
                     self.locList.push({
                         locName: locListInit[i].locName,
@@ -174,8 +175,8 @@ function LocationsModel() {
                         info: locListInit[i].info
                     });
                 }
-            };
-        };
+            }
+        }
         showMarkers();
     });
 }
