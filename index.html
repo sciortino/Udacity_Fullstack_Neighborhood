@@ -2,15 +2,15 @@
 <html>
   <head>
     <title>Simple Map</title>
-    <meta name="viewport" content="initial-scale=1.0">
+    <meta name=viewport content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   </head>
   <body>
 
     <div class="Grid">
-      <div class="Grid-cell-small">
+      <div class="Grid-cell-small list">
         <input class="fullWidth" data-bind="textInput: inputStr" />
 
         <div data-bind="foreach: locList">
@@ -25,10 +25,9 @@
       </div>
 
     </div>
-    <script type='text/javascript' src='knockout-3.4.2.js'></script>
-    <script type='text/javascript' src='viewmodel.js'></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCe_C5RIwwl0IVSQrEcJvHXqljBoYZ1BhU&callback=initMap"
-      async defer></script>
+    <script src="js/knockout-3.4.2.js"></script>
+    <script src="js/viewmodel.js"></script>
+    <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCe_C5RIwwl0IVSQrEcJvHXqljBoYZ1BhU&callback=initMap" onerror="mapError()"></script>
 
   </body>
 </html>

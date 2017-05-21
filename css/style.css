@@ -1,0 +1,55 @@
+
+/*Grid*/
+
+.Grid {
+  display: flex;
+  height: 100%;
+}
+
+.Grid-cell {
+  flex: 2;
+}
+
+.Grid-cell-small {
+  flex: 1;
+}
+
+/*General*/
+
+.fullWidth {
+  width: 100%;
+}
+
+/*Filter List*/
+
+.list {
+  height: 100%;
+  overflow: scroll;
+}
+
+.listItem {
+  display: block;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  transition-duration: 0.2s;
+  background-color: #e7e7e7;
+  width: 100%;
+  padding-left: 10px;
+  vertical-align: middle;
+}
+
+.listItem:hover {
+  background-color: white;
+}
+
+/*Map*/
+
+#map {
+  height: 100%;
+  width: 100%;
+}
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
